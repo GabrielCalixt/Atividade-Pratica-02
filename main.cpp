@@ -37,7 +37,10 @@ int main()
         cout << a << endl;
         codificaLZW(a, dic, cont);
     }
-    for (auto it = dic.begin(); it != dic.end(); ++it) cout << it->first << " = " << it->second << endl;
+    cout << "Deseja Imprimir o Dicionario? : s/n" << endl;
+    char k;
+    cin >> k;
+    if (k== 's') for (auto it = dic.begin(); it != dic.end(); ++it) cout << it->first << " = " << it->second << endl;
     file.close();
     return 0;
 }
